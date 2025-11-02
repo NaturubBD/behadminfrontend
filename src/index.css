@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+h5 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000;
+}
+
+h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-top-right-radius: 100vh;
+  border-bottom-right-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #969494;
+  border-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #576a8f;
+}
+
+/* button default */
+
+.btn {
+  @apply rounded-lg capitalize text-white transition-all flex items-center justify-center gap-1;
+}
+
+.btn-sm {
+  @apply px-4 h-[35px] text-xs font-medium border;
+}
+.btn-md {
+  @apply px-4 h-[45px] text-sm font-medium border-2;
+}
+.btn-lg {
+  @apply px-5 h-[55px] text-lg font-medium border;
+}
+
+.btn-primary {
+  @apply bg-primary border-primary;
+}
+
+.btn-danger {
+  @apply bg-danger border-danger;
+}
+
+.btn-warning {
+  @apply bg-warning border-warning;
+}
+
+.btn-success {
+  @apply bg-success border-success;
+}
+
+.btn-default {
+  @apply bg-default !text-dark border-default;
+}
+
+.btn-disabled {
+  opacity: 0.6;
+}
+
+.btn-outlined {
+  @apply !bg-transparent;
+}
+
+.btn-outlined.btn-primary {
+  @apply !text-primary;
+}
+
+.btn-outlined.btn-danger {
+  @apply !text-danger;
+}
+
+.btn-outlined.btn-warning {
+  @apply !text-warning;
+}
+
+.btn-outlined.btn-success {
+  @apply !text-success;
+}
+
+.btn-outlined.btn-default {
+  @apply !text-slate-500;
+}
+
+/* badge default */
+
+.badge {
+  @apply rounded-full capitalize text-white transition-all flex items-center justify-center gap-1;
+}
+
+.badge-sm {
+  @apply px-4 h-[35px] text-xs font-medium border;
+}
+.badge-md {
+  @apply px-4 h-[45px] text-sm font-medium border-2;
+}
+.badge-lg {
+  @apply px-5 h-[55px] text-lg font-medium border;
+}
+
+.badge-primary {
+  @apply bg-primary/20 border-primary/20;
+}
+
+.badge-danger {
+  @apply bg-danger/20 border-danger/20;
+}
+
+.badge-warning {
+  @apply bg-[#F4F0E7] border-[#F4F0E7];
+}
+
+.badge-success {
+  @apply bg-[#E6F2EE] border-[#E6F2EE];
+}
+
+.badge-default {
+  @apply bg-slate-50/20 !text-slate-500 border-slate-200/50;
+}
+
+.badge-disabled {
+  opacity: 0.6;
+}
+
+.badge-outlined {
+  @apply !bg-transparent;
+}
+
+/* others */
+
+.active_menu {
+  @apply !bg-primary !text-white;
+}
+
+.card {
+  @apply p-4 md:p-6 bg-white rounded-md;
+}
+
+/* badge color */
+.badge-success {
+  @apply text-[#179E66];
+}
+.badge-danger {
+  @apply text-danger;
+}
+.badge-info {
+  @apply text-info;
+}
+.badge-warning {
+  @apply text-[#FFB530];
+}
+
+/* table default css */
+table {
+  width: 100%;
+}
+
+table thead tr td {
+  @apply text-dark text-xs pb-2 px-2 whitespace-nowrap;
+}
+
+table tbody tr td {
+  @apply text-dark text-sm font-medium py-4 px-2 whitespace-nowrap;
+}
+
+table thead tr td:first-child,
+table tbody tr td:first-child {
+  padding-left: 0;
+}
+
+table thead tr td:last-child,
+table tbody tr td:last-child {
+  padding-right: 0;
+}
+
+table {
+  width: 100%;
+}
+
+table td:last-child {
+  white-space: nowrap;
+}
+
+/* react date picker customize */
+
+.react-date-picker__inputGroup input:focus {
+  outline: none;
+  background-color: unset;
+  border: unset;
+  box-shadow: unset;
+  user-select: none;
+}
+
+.react-calendar__tile--active {
+  background: #006edc;
+  color: #fff;
+}
+
+.react-date-picker__wrapper {
+  border: none !important;
+}
+
+label {
+  @apply text-sm font-medium text-slate-500 mb-2;
+}
+
+.spinning {
+  animation: rotation 600ms infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
